@@ -1,70 +1,18 @@
-const pessoa = {
-    nome: "Mariana",
-    idade: 28,
-    profissao: "desevolvedora"
-}
-pessoa.idade = 25;
+let valorAny: any;
+
+valorAny = 1;
+valorAny = 'ola';
+valorAny = true;
 
 
-const andre: {nome: string, idade: number, profissao: string} = {
-    nome: 'Andre',
-    idade: 25,
-    profissao:'pintor'
-}
+let valorString: string = 'teste';
+valorString = valorAny;
+let valorString2: string = 'testao';
+valorString2 = valorAny;
 
-const paula: {nome: string, idade: number, profissao: string} = {
-    nome: 'Paula',
-    idade: 25,
-    profissao:'Desenvolvedora'
+function somarString(string1: string, string2: string){
+    console.log(string1 + string2);
 }
 
-enum Profissao{
-    Professora,
-    Atriz,
-    Desenvolvedora,
-    JogadoraDeFutebol
-}
-
-interface Pessoa{
-    nome: string,
-    idade: number,
-    profissao?: Profissao
-}
-
-interface Estudante extends Pessoa{
-    materias:string[]
-}
-
-
-const vanessa: Pessoa ={
-    nome:'Vanessa',
-    idade: 23,
-    profissao:Profissao.Desenvolvedora
-}
-
-const maria: Pessoa ={
-    nome:'Maria',
-    idade: 23,
-    profissao:Profissao.Desenvolvedora
-}
-
-const jessica: Estudante ={
-    nome:'Jessica',
-    idade: 28,
-    profissao:Profissao.Desenvolvedora,
-    materias:['Matemática discreta', 'programacao']
-}
-
-const monica: Estudante ={
-    nome:'Monica',
-    idade: 28,
-    materias:['Matemática discreta', 'programacao']
-}
-
-function listar(lista: string[]) {
-    for (const item of lista){
-
-        console.log ('- ',item);
-    }
-}
-listar(monica.materias);
+somarString(valorString, valorString2);
+somarString('ola',', como vai?');
